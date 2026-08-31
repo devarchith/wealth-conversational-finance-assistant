@@ -1,0 +1,14 @@
+bcrypt>=4.1
+cloudinary>=1.41
+email-validator>=2.2
+fastapi>=0.115
+httpx>=0.28
+pydantic-settings>=2.7
+PyJWT>=2.10
+pymongo>=4.10
+python-multipart>=0.0.20
+uvicorn[standard]>=0.34
+
+[test]
+pytest>=8.3
+pytest-cov>=6.0
