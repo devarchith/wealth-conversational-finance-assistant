@@ -15,4 +15,3 @@
   {"id":"ambiguous-1","query":"What should I do next?","expected_intent":"fallback","expected_entities":[],"category":"ambiguity"},
   {"id":"not-finance-1","query":"Tell me about tomorrow's weather","expected_intent":"fallback","expected_entities":[],"category":"out_of_scope"}
 ]
-

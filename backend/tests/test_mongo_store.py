@@ -42,4 +42,3 @@ def test_mongo_store_rejects_duplicate_normalized_email():
         assert str(exc) == "duplicate_email"
     else:
         raise AssertionError("duplicate email was accepted")
-

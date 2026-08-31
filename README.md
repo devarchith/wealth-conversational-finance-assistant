@@ -146,4 +146,3 @@ This reads `evaluation/test_queries.json` and regenerates `results/evaluation.js
 - [API specification](docs/API_SPEC.md)
 - [Implementation audit](docs/IMPLEMENTATION_AUDIT.md)
 - [Development log](docs/DEVELOPMENT_LOG.md)
-

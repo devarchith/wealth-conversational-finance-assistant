@@ -34,4 +34,11 @@ This log records observed work; it does not backdate or simulate activity.
 - **Main files:** `evaluation/test_queries.json`, `scripts/`, `results/`, `docker-compose.yml`, `README.md`, `docs/IMPLEMENTATION_AUDIT.md`.
 - **Tests/checks:** 21 backend tests passed with 90% application coverage; Mongo-like persistence contract passed; evaluation ran against both engines; Compose YAML parsed; live API/frontend smoke passed; frontend lint, typecheck, 4 tests, production build, and zero-vulnerability production audit passed.
 - **Known limitations:** Results use the mock AI provider and must not be interpreted as foundation-model performance. Docker execution depends on Docker being installed on the host.
+- **Commit:** `2ae5b64`
+
+## Milestone 5 - Final regression and security audit
+
+- **Summary:** Re-ran every backend/frontend gate, rebuilt measured evaluation results, exercised the live HTTP flow, reviewed tracked files and staged content, scanned for common credential patterns, and confirmed the source report is not tracked.
+- **Tests/checks:** 21 backend tests at 90% coverage; Python compile and dependency check; 4 frontend tests; ESLint; TypeScript; Next.js production build; zero production dependency vulnerabilities; live frontend/API smoke; secret/source-report scan.
+- **Known limitations:** Shell Git has no direct GitHub credential in this environment, so repository transfer uses a temporary private-repository bootstrap workflow and preserves the local commit history.
 - **Commit:** pending
