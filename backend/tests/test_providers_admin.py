@@ -37,3 +37,11 @@ def test_health(client):
     assert response.status_code == 200
     assert response.json()["database"] == "available"
 
+
+def test_production_rejects_insecure_runtime_modes():
+    try:
+        Settings(app_env="production", database_backend="memory", secret_key="a-real-deployment-secret")
+    except ValueError as exc:
+        assert "In-memory persistence" in str(exc)
+    else:
+        raise AssertionError("production accepted in-memory persistence")

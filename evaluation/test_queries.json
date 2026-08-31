@@ -1,0 +1,18 @@
+[
+  {"id":"budget-1","query":"Help me build a monthly budget","expected_intent":"budget_analysis","expected_entities":["budget"],"category":"budgeting"},
+  {"id":"expense-1","query":"How should I analyze my expenses?","expected_intent":"expense_analysis","expected_entities":["expenses"],"category":"expenses"},
+  {"id":"save-1","query":"I want to save more every month","expected_intent":"savings_recommendation","expected_entities":["savings"],"category":"saving"},
+  {"id":"emergency-1","query":"How much emergency fund should I keep?","expected_intent":"emergency_fund","expected_entities":["emergency_fund"],"category":"saving"},
+  {"id":"risk-1","query":"How do I understand investment risk?","expected_intent":"risk_assessment","expected_entities":["risk","investing"],"category":"risk"},
+  {"id":"diversify-1","query":"Explain portfolio diversification","expected_intent":"diversification","expected_entities":["diversification","investing"],"category":"investment"},
+  {"id":"retire-1","query":"What should I consider for retirement planning?","expected_intent":"retirement","expected_entities":["retirement"],"category":"retirement"},
+  {"id":"funds-1","query":"Teach me the basics of mutual funds","expected_intent":"investment_education","expected_entities":["mutual_funds"],"category":"investment"},
+  {"id":"stock-1","query":"What are stocks?","expected_intent":"investment_education","expected_entities":["stocks"],"category":"investment"},
+  {"id":"goal-1","query":"Help me plan a financial goal","expected_intent":"goal_planning","expected_entities":["goals"],"category":"goals"},
+  {"id":"negation-1","query":"I don't want stocks; what should I consider instead?","expected_intent":"investment_education","expected_entities":["stocks","negation"],"category":"negation"},
+  {"id":"multi-1","query":"How can I save more and diversify for retirement?","expected_intent":"retirement","expected_entities":["savings","diversification","retirement"],"category":"multi_intent"},
+  {"id":"amount-1","query":"Can I save $500 toward my goal?","expected_intent":"savings_recommendation","expected_entities":["savings","goals","amount"],"category":"entity"},
+  {"id":"ambiguous-1","query":"What should I do next?","expected_intent":"fallback","expected_entities":[],"category":"ambiguity"},
+  {"id":"not-finance-1","query":"Tell me about tomorrow's weather","expected_intent":"fallback","expected_entities":[],"category":"out_of_scope"}
+]
+

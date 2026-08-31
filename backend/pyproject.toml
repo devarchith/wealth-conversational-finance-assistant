@@ -21,7 +21,7 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-test = ["pytest>=8.3", "pytest-cov>=6.0"]
+test = ["mongomock>=4.3", "pytest>=8.3", "pytest-cov>=6.0"]
 
 [tool.pytest.ini_options]
 addopts = "-q --strict-markers"

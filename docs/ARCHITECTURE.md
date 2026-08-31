@@ -38,7 +38,7 @@ flowchart TD
 
 - Normal development: MongoDB plus mock AI/email/storage.
 - External integrations: selected by environment variables and activated only when all required credentials are present.
-- Test: isolated in-memory repository with the same repository contracts, avoiding external network dependencies.
+- Test or explicit local demo mode (`DATABASE_BACKEND=memory`): isolated in-memory repository with the same repository contracts, avoiding external network dependencies. Production rejects this mode.
 
 ## Security boundaries
 
@@ -52,4 +52,3 @@ flowchart TD
 ## Report differences
 
 The report names microservices, event-driven systems, RabbitMQ/SQS, serverless functions, transactions, multiple languages, SQL, and cloud deployments without evidence of a coherent deployed implementation. These are treated as aspirational descriptions. The modular monolith is a documented reconstruction decision.
-

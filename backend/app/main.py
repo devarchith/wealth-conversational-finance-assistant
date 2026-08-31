@@ -42,7 +42,7 @@ def build_providers(settings: Settings):
 
 def create_app(settings: Settings | None = None, store: Store | None = None) -> FastAPI:
     settings = settings or get_settings()
-    store = store or MongoStore(settings.mongodb_uri, settings.mongodb_database)
+    store = store or (MemoryStore() if settings.database_backend == "memory" else MongoStore(settings.mongodb_uri, settings.mongodb_database))
     ai_provider, email_provider, storage_provider, fallbacks = build_providers(settings)
 
     @asynccontextmanager
@@ -72,4 +72,3 @@ def create_app(settings: Settings | None = None, store: Store | None = None) -> 
 
 
 app = create_app()
-

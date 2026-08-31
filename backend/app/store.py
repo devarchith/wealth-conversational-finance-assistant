@@ -188,8 +188,8 @@ class MemoryStore:
 
 
 class MongoStore:
-    def __init__(self, uri: str, database: str) -> None:
-        self.client = MongoClient(uri, serverSelectionTimeoutMS=1500, tz_aware=True)
+    def __init__(self, uri: str, database: str, client=None) -> None:
+        self.client = client or MongoClient(uri, serverSelectionTimeoutMS=1500, tz_aware=True)
         self.db: Database = self.client[database]
 
     @staticmethod
@@ -315,4 +315,3 @@ class MongoStore:
 
     def counts(self) -> dict[str, int]:
         return {"users": self.db.users.count_documents({}), "conversations": self.db.conversations.count_documents({}), "messages": self.db.messages.count_documents({}), "files": self.db.stored_files.count_documents({})}
-

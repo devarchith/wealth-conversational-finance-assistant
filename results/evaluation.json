@@ -1,0 +1,491 @@
+{
+  "generated_at": "2026-08-31T21:47:48+00:00",
+  "provider_note": "AI results use MockAIProvider; no external AI API was called.",
+  "results": [
+    {
+      "engine": "rule_based",
+      "metrics": {
+        "cases": 15,
+        "intent_accuracy": 1.0,
+        "entity_precision": 1.0,
+        "entity_recall": 0.95,
+        "fallback_rate": 0.1333
+      },
+      "cases": [
+        {
+          "id": "budget-1",
+          "category": "budgeting",
+          "query": "Help me build a monthly budget",
+          "expected_intent": "budget_analysis",
+          "predicted_intent": "budget_analysis",
+          "intent_correct": true,
+          "expected_entities": [
+            "budget"
+          ],
+          "predicted_entities": [
+            "budget"
+          ],
+          "confidence": 0.73
+        },
+        {
+          "id": "expense-1",
+          "category": "expenses",
+          "query": "How should I analyze my expenses?",
+          "expected_intent": "expense_analysis",
+          "predicted_intent": "expense_analysis",
+          "intent_correct": true,
+          "expected_entities": [
+            "expenses"
+          ],
+          "predicted_entities": [
+            "expenses"
+          ],
+          "confidence": 0.73
+        },
+        {
+          "id": "save-1",
+          "category": "saving",
+          "query": "I want to save more every month",
+          "expected_intent": "savings_recommendation",
+          "predicted_intent": "savings_recommendation",
+          "intent_correct": true,
+          "expected_entities": [
+            "savings"
+          ],
+          "predicted_entities": [
+            "savings"
+          ],
+          "confidence": 0.73
+        },
+        {
+          "id": "emergency-1",
+          "category": "saving",
+          "query": "How much emergency fund should I keep?",
+          "expected_intent": "emergency_fund",
+          "predicted_intent": "emergency_fund",
+          "intent_correct": true,
+          "expected_entities": [
+            "emergency_fund"
+          ],
+          "predicted_entities": [
+            "emergency_fund"
+          ],
+          "confidence": 0.73
+        },
+        {
+          "id": "risk-1",
+          "category": "risk",
+          "query": "How do I understand investment risk?",
+          "expected_intent": "risk_assessment",
+          "predicted_intent": "risk_assessment",
+          "intent_correct": true,
+          "expected_entities": [
+            "investing",
+            "risk"
+          ],
+          "predicted_entities": [
+            "investing",
+            "risk"
+          ],
+          "confidence": 0.75
+        },
+        {
+          "id": "diversify-1",
+          "category": "investment",
+          "query": "Explain portfolio diversification",
+          "expected_intent": "diversification",
+          "predicted_intent": "diversification",
+          "intent_correct": true,
+          "expected_entities": [
+            "diversification",
+            "investing"
+          ],
+          "predicted_entities": [
+            "diversification",
+            "investing"
+          ],
+          "confidence": 0.75
+        },
+        {
+          "id": "retire-1",
+          "category": "retirement",
+          "query": "What should I consider for retirement planning?",
+          "expected_intent": "retirement",
+          "predicted_intent": "retirement",
+          "intent_correct": true,
+          "expected_entities": [
+            "retirement"
+          ],
+          "predicted_entities": [
+            "retirement"
+          ],
+          "confidence": 0.73
+        },
+        {
+          "id": "funds-1",
+          "category": "investment",
+          "query": "Teach me the basics of mutual funds",
+          "expected_intent": "investment_education",
+          "predicted_intent": "investment_education",
+          "intent_correct": true,
+          "expected_entities": [
+            "mutual_funds"
+          ],
+          "predicted_entities": [
+            "mutual_funds"
+          ],
+          "confidence": 0.73
+        },
+        {
+          "id": "stock-1",
+          "category": "investment",
+          "query": "What are stocks?",
+          "expected_intent": "investment_education",
+          "predicted_intent": "investment_education",
+          "intent_correct": true,
+          "expected_entities": [
+            "stocks"
+          ],
+          "predicted_entities": [
+            "stocks"
+          ],
+          "confidence": 0.73
+        },
+        {
+          "id": "goal-1",
+          "category": "goals",
+          "query": "Help me plan a financial goal",
+          "expected_intent": "goal_planning",
+          "predicted_intent": "goal_planning",
+          "intent_correct": true,
+          "expected_entities": [
+            "goals"
+          ],
+          "predicted_entities": [
+            "goals"
+          ],
+          "confidence": 0.73
+        },
+        {
+          "id": "negation-1",
+          "category": "negation",
+          "query": "I don't want stocks; what should I consider instead?",
+          "expected_intent": "investment_education",
+          "predicted_intent": "investment_education",
+          "intent_correct": true,
+          "expected_entities": [
+            "negation",
+            "stocks"
+          ],
+          "predicted_entities": [
+            "stocks"
+          ],
+          "confidence": 0.73
+        },
+        {
+          "id": "multi-1",
+          "category": "multi_intent",
+          "query": "How can I save more and diversify for retirement?",
+          "expected_intent": "retirement",
+          "predicted_intent": "retirement",
+          "intent_correct": true,
+          "expected_entities": [
+            "diversification",
+            "retirement",
+            "savings"
+          ],
+          "predicted_entities": [
+            "diversification",
+            "retirement",
+            "savings"
+          ],
+          "confidence": 0.85
+        },
+        {
+          "id": "amount-1",
+          "category": "entity",
+          "query": "Can I save $500 toward my goal?",
+          "expected_intent": "savings_recommendation",
+          "predicted_intent": "savings_recommendation",
+          "intent_correct": true,
+          "expected_entities": [
+            "amount",
+            "goals",
+            "savings"
+          ],
+          "predicted_entities": [
+            "amount",
+            "goals",
+            "savings"
+          ],
+          "confidence": 0.85
+        },
+        {
+          "id": "ambiguous-1",
+          "category": "ambiguity",
+          "query": "What should I do next?",
+          "expected_intent": "fallback",
+          "predicted_intent": "fallback",
+          "intent_correct": true,
+          "expected_entities": [],
+          "predicted_entities": [],
+          "confidence": 0.2
+        },
+        {
+          "id": "not-finance-1",
+          "category": "out_of_scope",
+          "query": "Tell me about tomorrow's weather",
+          "expected_intent": "fallback",
+          "predicted_intent": "fallback",
+          "intent_correct": true,
+          "expected_entities": [],
+          "predicted_entities": [],
+          "confidence": 0.2
+        }
+      ]
+    },
+    {
+      "engine": "mock_ai",
+      "metrics": {
+        "cases": 15,
+        "intent_accuracy": 1.0,
+        "entity_precision": 1.0,
+        "entity_recall": 1.0,
+        "fallback_rate": 0.1333
+      },
+      "cases": [
+        {
+          "id": "budget-1",
+          "category": "budgeting",
+          "query": "Help me build a monthly budget",
+          "expected_intent": "budget_analysis",
+          "predicted_intent": "budget_analysis",
+          "intent_correct": true,
+          "expected_entities": [
+            "budget"
+          ],
+          "predicted_entities": [
+            "budget"
+          ],
+          "confidence": 0.83
+        },
+        {
+          "id": "expense-1",
+          "category": "expenses",
+          "query": "How should I analyze my expenses?",
+          "expected_intent": "expense_analysis",
+          "predicted_intent": "expense_analysis",
+          "intent_correct": true,
+          "expected_entities": [
+            "expenses"
+          ],
+          "predicted_entities": [
+            "expenses"
+          ],
+          "confidence": 0.83
+        },
+        {
+          "id": "save-1",
+          "category": "saving",
+          "query": "I want to save more every month",
+          "expected_intent": "savings_recommendation",
+          "predicted_intent": "savings_recommendation",
+          "intent_correct": true,
+          "expected_entities": [
+            "savings"
+          ],
+          "predicted_entities": [
+            "savings"
+          ],
+          "confidence": 0.83
+        },
+        {
+          "id": "emergency-1",
+          "category": "saving",
+          "query": "How much emergency fund should I keep?",
+          "expected_intent": "emergency_fund",
+          "predicted_intent": "emergency_fund",
+          "intent_correct": true,
+          "expected_entities": [
+            "emergency_fund"
+          ],
+          "predicted_entities": [
+            "emergency_fund"
+          ],
+          "confidence": 0.83
+        },
+        {
+          "id": "risk-1",
+          "category": "risk",
+          "query": "How do I understand investment risk?",
+          "expected_intent": "risk_assessment",
+          "predicted_intent": "risk_assessment",
+          "intent_correct": true,
+          "expected_entities": [
+            "investing",
+            "risk"
+          ],
+          "predicted_entities": [
+            "investing",
+            "risk"
+          ],
+          "confidence": 0.92
+        },
+        {
+          "id": "diversify-1",
+          "category": "investment",
+          "query": "Explain portfolio diversification",
+          "expected_intent": "diversification",
+          "predicted_intent": "diversification",
+          "intent_correct": true,
+          "expected_entities": [
+            "diversification",
+            "investing"
+          ],
+          "predicted_entities": [
+            "diversification",
+            "investing"
+          ],
+          "confidence": 0.92
+        },
+        {
+          "id": "retire-1",
+          "category": "retirement",
+          "query": "What should I consider for retirement planning?",
+          "expected_intent": "retirement",
+          "predicted_intent": "retirement",
+          "intent_correct": true,
+          "expected_entities": [
+            "retirement"
+          ],
+          "predicted_entities": [
+            "retirement"
+          ],
+          "confidence": 0.83
+        },
+        {
+          "id": "funds-1",
+          "category": "investment",
+          "query": "Teach me the basics of mutual funds",
+          "expected_intent": "investment_education",
+          "predicted_intent": "investment_education",
+          "intent_correct": true,
+          "expected_entities": [
+            "mutual_funds"
+          ],
+          "predicted_entities": [
+            "mutual_funds"
+          ],
+          "confidence": 0.83
+        },
+        {
+          "id": "stock-1",
+          "category": "investment",
+          "query": "What are stocks?",
+          "expected_intent": "investment_education",
+          "predicted_intent": "investment_education",
+          "intent_correct": true,
+          "expected_entities": [
+            "stocks"
+          ],
+          "predicted_entities": [
+            "stocks"
+          ],
+          "confidence": 0.83
+        },
+        {
+          "id": "goal-1",
+          "category": "goals",
+          "query": "Help me plan a financial goal",
+          "expected_intent": "goal_planning",
+          "predicted_intent": "goal_planning",
+          "intent_correct": true,
+          "expected_entities": [
+            "goals"
+          ],
+          "predicted_entities": [
+            "goals"
+          ],
+          "confidence": 0.83
+        },
+        {
+          "id": "negation-1",
+          "category": "negation",
+          "query": "I don't want stocks; what should I consider instead?",
+          "expected_intent": "investment_education",
+          "predicted_intent": "investment_education",
+          "intent_correct": true,
+          "expected_entities": [
+            "negation",
+            "stocks"
+          ],
+          "predicted_entities": [
+            "negation",
+            "stocks"
+          ],
+          "confidence": 0.88
+        },
+        {
+          "id": "multi-1",
+          "category": "multi_intent",
+          "query": "How can I save more and diversify for retirement?",
+          "expected_intent": "retirement",
+          "predicted_intent": "retirement",
+          "intent_correct": true,
+          "expected_entities": [
+            "diversification",
+            "retirement",
+            "savings"
+          ],
+          "predicted_entities": [
+            "diversification",
+            "retirement",
+            "savings"
+          ],
+          "confidence": 0.97
+        },
+        {
+          "id": "amount-1",
+          "category": "entity",
+          "query": "Can I save $500 toward my goal?",
+          "expected_intent": "savings_recommendation",
+          "predicted_intent": "savings_recommendation",
+          "intent_correct": true,
+          "expected_entities": [
+            "amount",
+            "goals",
+            "savings"
+          ],
+          "predicted_entities": [
+            "amount",
+            "goals",
+            "savings"
+          ],
+          "confidence": 0.97
+        },
+        {
+          "id": "ambiguous-1",
+          "category": "ambiguity",
+          "query": "What should I do next?",
+          "expected_intent": "fallback",
+          "predicted_intent": "fallback",
+          "intent_correct": true,
+          "expected_entities": [],
+          "predicted_entities": [],
+          "confidence": 0.35
+        },
+        {
+          "id": "not-finance-1",
+          "category": "out_of_scope",
+          "query": "Tell me about tomorrow's weather",
+          "expected_intent": "fallback",
+          "predicted_intent": "fallback",
+          "intent_correct": true,
+          "expected_entities": [],
+          "predicted_entities": [],
+          "confidence": 0.35
+        }
+      ]
+    }
+  ]
+}

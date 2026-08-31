@@ -18,6 +18,7 @@ class Settings(BaseSettings):
 
     mongodb_uri: str = "mongodb://localhost:27017"
     mongodb_database: str = "wealth_assistant"
+    database_backend: Literal["mongodb", "memory"] = "mongodb"
 
     ai_provider: Literal["mock", "openai"] = "mock"
     openai_api_key: str | None = None
@@ -42,6 +43,8 @@ class Settings(BaseSettings):
     def validate_production_secret(self) -> "Settings":
         if self.app_env == "production" and self.secret_key == "development-only-change-me":
             raise ValueError("SECRET_KEY must be configured in production")
+        if self.app_env == "production" and self.database_backend == "memory":
+            raise ValueError("In-memory persistence is not allowed in production")
         return self
 
     @property
@@ -52,4 +55,3 @@ class Settings(BaseSettings):
 @lru_cache
 def get_settings() -> Settings:
     return Settings()
-

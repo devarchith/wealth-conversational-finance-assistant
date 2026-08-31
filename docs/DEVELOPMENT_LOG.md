@@ -8,7 +8,7 @@ This log records observed work; it does not backdate or simulate activity.
 - **Main files:** `docs/PROJECT_SPEC.md`, `ARCHITECTURE.md`, `FEATURE_MATRIX.md`, `DATABASE_SCHEMA.md`, `API_SPEC.md`, `RECONSTRUCTION_ASSUMPTIONS.md`, `IMPLEMENTATION_PLAN.md`, `.gitignore`, `.env.example`.
 - **Tests/checks:** Confirmed the source report remains outside the repository and is ignored by name/path; checked documentation coverage against the supplied reconstruction brief.
 - **Known limitations:** GitHub repository exists privately, but shell Git authentication/transport is not yet configured; work is committed locally until a secure push route is established.
-- **Commit:** pending
+- **Commit:** `70984a7`
 
 ## Milestone 2 - Backend vertical slice
 
@@ -17,7 +17,7 @@ This log records observed work; it does not backdate or simulate activity.
 - **Tests/checks:** 18 backend tests passed; application coverage 83%; Python bytecode compilation passed; `pip check` reported no broken requirements.
 - **Failures fixed:** Password-reset confirmation initially reused an intentionally invalid placeholder domain that the email validator correctly rejected. Replaced it with a valid non-user validation address and reran the full suite.
 - **Known limitations:** Live MongoDB and external providers are not required by the test suite; MongoDB is the production repository and mock providers are the credential-free default.
-- **Commit:** pending
+- **Commit:** `08ab183` (implementation), `fbfb975` (generated-metadata cleanup)
 
 ## Milestone 3 - Focused finance frontend
 
@@ -26,4 +26,12 @@ This log records observed work; it does not backdate or simulate activity.
 - **Tests/checks:** ESLint passed with zero warnings; strict TypeScript check passed; 4 Vitest assertions passed; Next.js production build generated all 11 routes; production dependency audit reported zero vulnerabilities after upgrade.
 - **Failures fixed:** Replaced an effect-driven auth state update, configured the test alias, wrapped reset-token query parsing in a Suspense boundary, and upgraded Next.js from 16.1.6 to patched 16.3.3 after the audit identified three high-severity dependency findings.
 - **Known limitations:** Access tokens use browser local storage in this reconstruction; a production deployment should prefer a same-site HttpOnly cookie/BFF pattern after deployment topology is fixed.
+- **Commit:** `c3e854b`
+
+## Milestone 4 - Reproducible chatbot evaluation and deployment path
+
+- **Summary:** Added a labeled report-derived query set, deterministic evaluator for both chatbot designs, measured JSON/Markdown outputs, Docker Compose for Next.js/FastAPI/MongoDB, a live HTTP smoke runner, Mongo repository contract tests, README, and report-to-code audit.
+- **Main files:** `evaluation/test_queries.json`, `scripts/`, `results/`, `docker-compose.yml`, `README.md`, `docs/IMPLEMENTATION_AUDIT.md`.
+- **Tests/checks:** 21 backend tests passed with 90% application coverage; Mongo-like persistence contract passed; evaluation ran against both engines; Compose YAML parsed; live API/frontend smoke passed; frontend lint, typecheck, 4 tests, production build, and zero-vulnerability production audit passed.
+- **Known limitations:** Results use the mock AI provider and must not be interpreted as foundation-model performance. Docker execution depends on Docker being installed on the host.
 - **Commit:** pending
