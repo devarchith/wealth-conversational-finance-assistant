@@ -10,5 +10,5 @@ export function Protected({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     if (!authenticated) router.replace("/login");
   }, [authenticated, router]);
-  return authenticated ? children : <main className="centered"><p>Checking your session…</p></main>;
+  return authenticated ? children : <main className="centered session-check" role="status"><span className="spinner" aria-hidden="true"/><div><strong>Checking your session</strong><p>Opening your private financial workspace…</p></div></main>;
 }

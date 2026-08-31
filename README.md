@@ -93,6 +93,7 @@ Copy `.env.example`; never commit `.env`.
 | `STORAGE_PROVIDER` | no | `mock` or `cloudinary` |
 | `CLOUDINARY_*` | Cloudinary mode | Deployment-owned storage configuration |
 | `NEXT_PUBLIC_API_URL` | frontend build | Browser-visible API base URL |
+| `NEXT_PUBLIC_SITE_URL` | frontend build | Canonical frontend origin for social-preview metadata |
 
 If a non-mock provider is selected without complete credentials, startup selects the matching mock and reports the fallback in health/admin metadata. Credentials are never stored in MongoDB.
 
