@@ -41,4 +41,4 @@ This log records observed work; it does not backdate or simulate activity.
 - **Summary:** Re-ran every backend/frontend gate, rebuilt measured evaluation results, exercised the live HTTP flow, reviewed tracked files and staged content, scanned for common credential patterns, and confirmed the source report is not tracked.
 - **Tests/checks:** 21 backend tests at 90% coverage; Python compile and dependency check; 4 frontend tests; ESLint; TypeScript; Next.js production build; zero production dependency vulnerabilities; live frontend/API smoke; secret/source-report scan.
 - **Known limitations:** Shell Git has no direct GitHub credential in this environment, so repository transfer uses a temporary private-repository bootstrap workflow and preserves the local commit history.
-- **Commit:** pending
+- **Commit:** `3e3b386`
